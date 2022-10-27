@@ -2,13 +2,13 @@ steps:
 
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t',
-           'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage',
+           'gcr.io/tw-rd-sp-tim/ci-flask:4.0',
            '.']
 
   # Docker Push
   - name: 'gcr.io/cloud-builders/docker'
     args: ['push',
-           'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage']
+           'gcr.io/tw-rd-sp-tim/ci-flask:4.0']
 
     env:
       - 'CLOUDSDK_COMPUTE_REGION=us-central1'
