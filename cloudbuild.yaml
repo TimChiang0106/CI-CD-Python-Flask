@@ -2,9 +2,9 @@
 
 steps:
   # [START CI]
-  - name: 'python:3.7'
+  - name: 'python'
     id: TestCase
-    entrypoint: /bin/sh
+    entrypoint: python
     args: ['-c', 'pip install flask && python test_app.py -v']
 
   - name: 'gcr.io/cloud-builders/docker'
