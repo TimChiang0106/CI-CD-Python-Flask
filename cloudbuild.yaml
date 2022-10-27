@@ -2,10 +2,9 @@ steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     args:
       - gcloud
-      - functions
+      - run
       - deploy
       - ci-flask-functions
       - --region=asia-east1
-      - --source=.
-      - --trigger-http
-      - --runtime=python38
+      - --image=gcr.io/tw-rd-sp-tim/ci-flask-prod:1.0
+      - --platform=managed
