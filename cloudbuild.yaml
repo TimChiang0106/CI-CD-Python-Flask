@@ -10,13 +10,13 @@ steps:
   - name: 'gcr.io/cloud-builders/docker'
     id: Build
     args: ['build', '-t',
-           'gcr.io/tw-rd-sp-tim/ci-flask-prod:$VERSION',
+           'gcr.io/tw-rd-sp-tim/ci-flask-prod:${SHORT_SHA}',
            '.']
 
   - name: 'gcr.io/cloud-builders/docker'
     id: Push
     args: ['push',
-           'gcr.io/tw-rd-sp-tim/ci-flask-prod:$VERSION']
+           'gcr.io/tw-rd-sp-tim/ci-flask-prod:${SHORT_SHA}']
   # [END CI]
 
   # [START CD]
