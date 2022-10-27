@@ -1,10 +1,5 @@
 steps:
 
-  - name: 'python:3.7'
-    id: Test
-    entrypoint: /bin/bash
-    args: [-c, 'pip install flask && python main.py']
-
   - name: 'gcr.io/cloud-builders/docker'
     args: ['build', '-t',
            'us-central1-docker.pkg.dev/${PROJECT_ID}/my-docker-repo/myimage',
