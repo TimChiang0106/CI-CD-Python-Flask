@@ -5,7 +5,7 @@ steps:
       - functions
       - deploy
       - ci-flask-functions
-      - --region=asia-east-1
+      - --region=asia-east1
       - --source=.
       - --trigger-http
       - --runtime=python38
