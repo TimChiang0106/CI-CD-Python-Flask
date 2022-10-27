@@ -2,10 +2,13 @@
 
 steps:
   # [START CI]
+  - name: python
+    entrypoint: pip
+    args: [ "install", "-r", "requirements.txt", "--user" ]
   - name: 'python'
     id: TestCase
     entrypoint: python
-    args: ['-c', 'pip install flask && python test_app.py -v']
+    args: ['-c', 'python test_app.py -v']
 
   - name: 'gcr.io/cloud-builders/docker'
     id: Build
