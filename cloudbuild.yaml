@@ -5,6 +5,7 @@ steps:
       - run
       - deploy
       - ci-flask-functions
+      - --allow-unauthenticated
       - --region=asia-east1
       - --image=gcr.io/tw-rd-sp-tim/ci-flask-prod:1.0
       - --platform=managed
