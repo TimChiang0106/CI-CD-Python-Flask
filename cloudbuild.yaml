@@ -8,7 +8,7 @@ steps:
       - --region=asia-east-1
       - --source=.
       - --trigger-http
-      - --runtime=python37
+      - --runtime=python38
     env:
       - 'CLOUDSDK_COMPUTE_REGION=us-central1'
       - 'CLOUDSDK_COMPUTE_ZONE=us-central1-a'
